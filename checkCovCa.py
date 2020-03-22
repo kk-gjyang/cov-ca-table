@@ -9,7 +9,8 @@ from requests_html import HTMLSession
 
 caDataFile = "caData.txt"
 session = HTMLSession()
-r = session.get('https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19.html')
+r = session.get(
+    'https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html')
 r.html.render()
 
 soup = BeautifulSoup(r.html.html, 'html.parser')
